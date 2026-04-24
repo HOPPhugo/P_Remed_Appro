@@ -14,7 +14,7 @@ public class Movementplayer : MonoBehaviour
 
     // Update is called once per frame
 
-    
+
     void Update()
     {
         float axisH = Input.GetAxis("Horizontal");
@@ -39,5 +39,5 @@ public class Movementplayer : MonoBehaviour
                 false; // Si l'input est positif, le personnage se déplace à droite
         sp.flipX = isLeft; // Inverse le sprite si nécessaire
     }
-       
+
 }
