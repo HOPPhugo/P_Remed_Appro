@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 100;
+    public int health = 40;
     public int scoreValue = 10;
 
     public void TakeDamage(int damage)
