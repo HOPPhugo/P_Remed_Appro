@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreTextEnd;
 
     private void Awake()
     {
@@ -18,5 +19,6 @@ public class ScoreManager : MonoBehaviour
     {
         score += points;
         scoreText.text = "Score : " + score;
+        scoreTextEnd.text = "Score : " + score;
     }
 }

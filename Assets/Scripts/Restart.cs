@@ -1,25 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
-public class Shoot : MonoBehaviour
+public class Restart : MonoBehaviour
 {
-
-    public float speed = 20f;
-    public int damage = 40;
-    public Rigidbody2D rb;
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.linearVelocity = transform.right * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
     }
-    
+    public void RestartGame()
+    {
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
 }

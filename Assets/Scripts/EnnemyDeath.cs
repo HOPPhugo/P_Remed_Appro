@@ -2,23 +2,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 40;
     public int scoreValue = 10;
 
-    public void TakeDamage(int damage)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        health -= damage;
-
-        if (health <= 0)
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Joueur")
         {
-            Die();
+            ScoreManager.instance.AddScore(scoreValue);
         }
-    }
-
-    void Die()
-    {
-        ScoreManager.instance.AddScore(scoreValue);
-
-        Destroy(gameObject);
     }
 }

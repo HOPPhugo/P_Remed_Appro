@@ -29,4 +29,8 @@ public class soundByGit : MonoBehaviour
             ZaHando.Play();
         }
     }
+    private void ScoreManager()
+    {
+
+    }
 }

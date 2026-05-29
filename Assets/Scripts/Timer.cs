@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 60000;
+    public float timeRemaining = 10;
+    public GameObject player;
+    public GameObject Background;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +24,9 @@ public class Timer : MonoBehaviour
             timeRemaining = 0;
                 // Game Over logic here
                 Debug.Log("Game Over!");
+                Background.SetActive(true);
+                Destroy(player);
+
         }
     }
 }
